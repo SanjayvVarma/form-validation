@@ -29,5 +29,3 @@ FormFormik is a React component designed to manage a user signup form. It utiliz
    npm install 
 
    npm run dev
-
-
