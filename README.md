@@ -29,3 +29,41 @@ FormFormik is a React component designed to manage a user signup form. It utiliz
    npm install 
 
    npm run dev
+
+
+# Code Overview
+
+The main component `FormFormik` is structured to effectively handle user input for a registration form. Below are the key aspects of this component:
+
+## State Management
+- Utilizes **Formik** to manage form state, including the values of each input field, handling changes, and processing form submission.
+
+## Input Fields
+- Contains four input fields:
+  - **Name**: Captures the user's full name.
+  - **Email**: Captures the user's email address.
+  - **Password**: Captures the user's password.
+  - **Confirm Password**: Ensures the user re-enters their password for confirmation.
+- Each input field has associated validation rules defined using **Yup**.
+
+## Error Messages
+- Implements conditional rendering for error messages:
+  - Displays validation errors below each input field based on user interaction (touched state) and validation results.
+
+## Submission Handling
+- On successful form submission:
+  - Logs the captured values to the console.
+  - Resets the form fields for a fresh input state.
+
+### Example Code Snippet
+Here’s a brief code snippet highlighting the structure:
+
+```javascript
+const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit: (values, action) => {
+        console.log(values); 
+        action.resetForm();  
+    }
+});
