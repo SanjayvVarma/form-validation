@@ -31,6 +31,15 @@ FormFormik is a React component designed to manage a user signup form. It utiliz
    npm run dev
 
 
+## Validation Logic
+
+The validation schema is defined using Yup and checks the following:
+
+* **Name**: Must be a string between 2 and 15 characters and is required.
+* **Email**: Must be a valid email format, required, and must end with @gmail.com.
+* **Password**: Must be at least 8 characters long and match a specific pattern.
+* **Confirm Password**: Must match the password field.
+
 # Code Overview
 
 The main component `FormFormik` is structured to effectively handle user input for a registration form. Below are the key aspects of this component:
