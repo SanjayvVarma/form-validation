@@ -4,7 +4,7 @@ const validationSchema = Yup.object({
     name: Yup.string()
         .min(2)
         .max(15)
-        .required("Enter your name"),
+        .required("Enter your full name"),
 
     email: Yup.string()
         .email("Invalid email format")
